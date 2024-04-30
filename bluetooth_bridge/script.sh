@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Executar o comando para conectar ao dispositivo Bluetooth
+sudo rfcomm connect /dev/rfcomm1 98:D3:31:f5:b7:00 1 &
+
+# Abrir um novo terminal e executar o programa C
+sudo ./main
