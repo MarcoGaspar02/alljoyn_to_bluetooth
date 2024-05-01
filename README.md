@@ -20,5 +20,5 @@ Before you begin, make sure you have met the following requirements:
 ## Installation
 
 Follow these instructions to set up the project:
-1. Clone this repository: `git clone github.com/MarcoGaspar02/alljoyn_to_bluetooth.git`
+1. Clone this repository: `git clone https://github.com/MarcoGaspar02/alljoyn_to_bluetooth.git` (⚠️Due to some running permissions of the files in the repository, you will need to make an aclone in administrator mode.)
 2. ...
