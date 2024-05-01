@@ -4,6 +4,4 @@
 sudo rfcomm connect /dev/rfcomm1 98:D3:31:f5:b7:00 1 &
 
 # Abrir um novo terminal e executar o programa C
-gcc -o main ./main.c 
-
-sudo ./main
+gcc -o main ./main.c | sudo ./main
