@@ -78,7 +78,7 @@ int main() {
                 break;
         }
         // Ler e exibir resposta do dispositivo Arduino
-        if choice!='e' {
+        if (choice!='e') {
             sleep(4);
             readResponse(fd);
         }
