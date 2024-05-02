@@ -1,4 +1,7 @@
+<img src="https://github.com/MarcoGaspar02/alljoyn_to_bluetooth/assets/122706382/2edbe445-2451-414b-b7d2-7ab89d9bd21b" alt="Alljoyn logo" width="200px">
+
 # Alljoyn JS to enable data from a bluetooth node sensor
+
 
 This project contains a code bases to comunicate with alljoyn using a local area network.
 This project was developed in te context of a Computational Systems Mobility curricular unit of Master's degree in Computer Engineering - Mobile Computing Leiria Polytechnic Institute.
