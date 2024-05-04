@@ -57,6 +57,9 @@ int main() {
         return 1;
     }
 
+    // Limpar o arquivo
+    ftruncate(fileno(file), 0);
+
     // Menu
     char choice;
     do {
