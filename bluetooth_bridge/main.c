@@ -13,15 +13,23 @@ void sendMessage(int fd, char *message) {
     usleep(100000); // Pequeno atraso para garantir que a mensagem seja enviada completamente
 }
 
-// Função para ler e exibir resposta do dispositivo Arduino e escrever em um arquivo
 void readResponse(int fd, FILE *file) {
     char response[255];
     int bytes_read = read(fd, response, sizeof(response));
     if (bytes_read > 0) {
         response[bytes_read] = '\0'; // Adiciona terminador de string
         printf("Resposta do dispositivo Arduino: %s\n", response);
+        
+        // Abre o arquivo em modo de escrita, truncando-o para zero antes de escrever
+        file = fopen("dados_bluetooth.txt", "w");
+        if (file == NULL) {
+            perror("Erro ao abrir o arquivo");
+            return;
+        }
+        
         fprintf(file, "%s\n", response); // Escreve os dados no arquivo
         fflush(file); // Força a escrita imediata no arquivo
+        fclose(file); // Fecha o arquivo após a escrita
     }
 }
 

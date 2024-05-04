@@ -1,4 +1,2 @@
-LED is on👍
-
-LED is off👎
+LED is off😱
 
