@@ -108,7 +108,7 @@ setInterval(function() {
         console.log("Timestamp:", timestamp);
 
         // Enviar o conteúdo do arquivo pelo sinal "Chat"
-        chatObject.signal(null, sessionId, inter, "Chat", timestamp + ": " + data);
+        chatObject.signal(null, sessionId, inter, "Chat", data);
     });
 }, 20000); // 20 segundos
 
