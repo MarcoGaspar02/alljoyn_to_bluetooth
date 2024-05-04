@@ -77,8 +77,14 @@ stdin.on('data', function (key) {
                 console.error("Erro ao ler o arquivo bluetoothdata.txt:", err);
                 return;
             }
+            // Obter o timestamp atual
+            var now = new Date();
+            var timestamp = now.getDate().toString().padStart(2, '0') + '/' + (now.getMonth() + 1).toString().padStart(2, '0') + '/' + now.getFullYear() + ' ' + now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0') + ':' + now.getSeconds().toString().padStart(2, '0') + '.' + now.getMilliseconds().toString().padStart(3, '0');
+
+            console.log("Timestamp:", timestamp);
+
             // Enviar o conteúdo do arquivo pelo sinal "Chat"
-            chatObject.signal(null, sessionId, inter, "Chat", data);
+            chatObject.signal(null, sessionId, inter, "Chat", timestamp + ": " + data);
         });
     }
 });
@@ -90,8 +96,14 @@ setInterval(function() {
             console.error("Erro ao ler o arquivo bluetoothdata.txt:", err);
             return;
         }
+        // Obter o timestamp atual
+        var now = new Date();
+        var timestamp = now.getDate().toString().padStart(2, '0') + '/' + (now.getMonth() + 1).toString().padStart(2, '0') + '/' + now.getFullYear() + ' ' + now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0') + ':' + now.getSeconds().toString().padStart(2, '0') + '.' + now.getMilliseconds().toString().padStart(3, '0');
+
+        console.log("Timestamp:", timestamp);
+
         // Enviar o conteúdo do arquivo pelo sinal "Chat"
-        chatObject.signal(null, sessionId, inter, "Chat", data);
+        chatObject.signal(null, sessionId, inter, "Chat", timestamp + ": " + data);
     });
 }, 20000); // 20 segundos
 

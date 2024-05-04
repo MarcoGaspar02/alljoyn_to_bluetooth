@@ -1,3 +1,8 @@
+function zeroPad(num, places) {
+    var zero = places - num.toString().length + 1;
+    return Array(+(zero > 0 && zero)).join("0") + num;
+}
+
 var alljoyn = require('./node_modules/alljoyn/');
 var fs = require('fs');
 
@@ -77,8 +82,14 @@ stdin.on('data', function (key) {
                 console.error("Erro ao ler o arquivo bluetoothdata.txt:", err);
                 return;
             }
+            // Obter o timestamp atual
+            var now = new Date();
+            var timestamp = zeroPad(now.getDate(), 2) + '/' + zeroPad(now.getMonth() + 1, 2) + '/' + now.getFullYear() + ' ' + zeroPad(now.getHours(), 2) + ':' + zeroPad(now.getMinutes(), 2) + ':' + zeroPad(now.getSeconds(), 2) + '.' + zeroPad(now.getMilliseconds(), 3);
+
+            console.log("Timestamp:", timestamp);
+
             // Enviar o conteúdo do arquivo pelo sinal "Chat"
-            chatObject.signal(null, sessionId, inter, "Chat", data);
+            chatObject.signal(null, sessionId, inter, "Chat", timestamp + ": " + data);
         });
     }
 });
@@ -90,9 +101,14 @@ setInterval(function() {
             console.error("Erro ao ler o arquivo bluetoothdata.txt:", err);
             return;
         }
+        // Obter o timestamp atual
+        var now = new Date();
+        var timestamp = zeroPad(now.getDate(), 2) + '/' + zeroPad(now.getMonth() + 1, 2) + '/' + now.getFullYear() + ' ' + zeroPad(now.getHours(), 2) + ':' + zeroPad(now.getMinutes(), 2) + ':' + zeroPad(now.getSeconds(), 2) + '.' + zeroPad(now.getMilliseconds(), 3);
+
+        console.log("Timestamp:", timestamp);
+
         // Enviar o conteúdo do arquivo pelo sinal "Chat"
-        chatObject.signal(null, sessionId, inter, "Chat", data);
+        chatObject.signal(null, sessionId, inter, "Chat", timestamp + ": " + data);
     });
 }, 20000); // 20 segundos
-
 
