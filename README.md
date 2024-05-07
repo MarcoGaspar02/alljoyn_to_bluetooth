@@ -28,3 +28,7 @@ Follow these instructions to set up the project:
 https://myipleiria-my.sharepoint.com/:f:/g/personal/2230320_my_ipleiria_pt/EnnTi-vtsQ9DhVb-zkuW78kBxtNrc0UQIeEQGRpyHqSMOQ?e=O4aazA
 
 Password:alljoyn_msc_IPL
+
+## Scenario architecture
+![image](https://github.com/MarcoGaspar02/alljoyn_to_bluetooth/assets/122706382/37e46509-2a8c-4d18-92de-d71739707786)
+
