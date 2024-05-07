@@ -23,7 +23,6 @@ Before you begin, make sure you have met the following requirements:
 
 Follow these instructions to set up the project:
 1. Clone this repository: `git clone https://github.com/MarcoGaspar02/alljoyn_to_bluetooth.git` (⚠️Due to some running permissions of the files in the repository, you will need to make an aclone in administrator mode.)
-2. run `npm install alljoyn`
 
 ## Built Virtual Machine
 https://myipleiria-my.sharepoint.com/:f:/g/personal/2230320_my_ipleiria_pt/EnnTi-vtsQ9DhVb-zkuW78kBxtNrc0UQIeEQGRpyHqSMOQ?e=O4aazA
